@@ -1,3 +1,1 @@
 #DOCKER COMMANDS
-
-asd
