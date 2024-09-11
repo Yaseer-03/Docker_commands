@@ -1,0 +1,43 @@
+Docker commands:
+	
+	docker -v / docker --version -> To see the version of the docker.
+	
+	docker pull imagename / docker pull imageName:versionNumber(if there/ or it pull the latest version) -> to pull image from docker hub.
+
+	docker images -> To see how many images we have in our docker..
+
+	docker search imageName -> To search image in docker hub (online).
+
+	docker ps -> To see which containers are running
+	
+	docker ps -a -> which containers have runned
+
+	docker run imageName -> To run the imageName container
+
+	docker run --name containerName -d imageName/ imageId. -> To run the command and we can keep the custom name for the container
+
+	docker run -it -d imageName -> To start running command (note this command will be running until user close it), (-d) detach means the respective container will run in background.
+
+	docker exec -it containerId/imageId commandName -> to run the container
+	
+	docker inspect imageId -> To get the details of the container
+
+	docker stop containerName/containerId (first two/three characters of the containerId) -> To stop the container from running stage
+
+	docker rm containerId -> To remove the containers
+
+	docker rmi imageName -> To remove images
+	
+	docker restart containerId/ContainerName -> To restart the container  			
+	
+	docker build -t imageName(must be in lowercase) . -> To build custom docker image
+
+	
+	If we are deploying the spring boot application:
+	
+	We have to convert the spring application boot to jar file ( by going in build directory copy jar file from there of the respective application which we want to build spring boot application in docker ). 
+	
+	docker run --name containerName -it -p 9595:8080 -d imageName -> To run the spring boot application (9595 : 8080 mapping host address to docker address)
+	
+	After mapping the host address to docker address now we can run server on localhost:9595
+	
